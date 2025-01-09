@@ -29,7 +29,7 @@ const UsersPage: React.FC<UsersPageProps> = ({ users }) => {
   );
 };
 
-// Fetch user data at build time
+// Fetch user data at build time using getStaticProps
 export const getStaticProps = async () => {
   const response = await fetch("https://jsonplaceholder.typicode.com/users");
   const data = await response.json();
@@ -45,9 +45,10 @@ export const getStaticProps = async () => {
     },
   }));
 
+  // Return users as props to the component
   return {
     props: {
-      users: formattedUsers, // Pass users as props
+      users: formattedUsers,
     },
   };
 };
