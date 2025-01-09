@@ -1,6 +1,6 @@
 import { useState } from "react";
-import Card from "../components/common/Card";
-import PostModal from "../components/common/PostModal";
+import Card from "@/components/common/Card";
+import PostModal from "@/components/common/PostModal";
 
 const HomePage = () => {
   const [isModalOpen, setIsModalOpen] = useState(false); // State to control modal visibility
